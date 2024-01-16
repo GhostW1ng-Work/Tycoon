@@ -21,7 +21,7 @@ public class BannerShower : MonoBehaviour
 
     private void OnBuildingBuyed()
     {
-        Destroy(gameObject);
+        DisablePanel();
     }
 
     public void EnablePanel()

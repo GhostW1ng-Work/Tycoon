@@ -6,9 +6,14 @@ public class BuyTrigger : MonoBehaviour
     [SerializeField] private BannerShower _bannerShower;
     [SerializeField] private BuyButton _buyButton;
 
-    private void OnEnable()
+    public void SubcribeToOnBuildingBuyed()
     {
         _buyButton.BuildingBuyed += OnBuildingBuyed;
+    }
+
+    public void UnSubcribeToOnBuildingBuyed()
+    {
+        _buyButton.BuildingBuyed -= OnBuildingBuyed;
     }
 
     private void OnDisable()
@@ -26,6 +31,8 @@ public class BuyTrigger : MonoBehaviour
         if(other.TryGetComponent(out PlayerWallet wallet))
         {
             _bannerShower.SetBanner(_banner);
+            _buyButton.SetTrigger(this);
+            SubcribeToOnBuildingBuyed();
             _bannerShower.EnablePanel();
         }
     }
@@ -35,6 +42,7 @@ public class BuyTrigger : MonoBehaviour
         if (other.TryGetComponent(out PlayerWallet wallet))
         {
             _bannerShower.DisablePanel();
+            UnSubcribeToOnBuildingBuyed();
         }
     }
 }

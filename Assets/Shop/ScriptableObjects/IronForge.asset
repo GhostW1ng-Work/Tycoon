@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
-  m_Name: Forge
+  m_Name: IronForge
   m_EditorClassIdentifier: 
-  _buyText: "\u0410\u0431\u0438\u0431\u0430 \u0431\u0430\u0431\u0430?"
-  _priceText: "25 \u0431\u0438\u0431\u0438\u043A\u043E\u0432"
-  _price: 25
-  _buildTemplate: {fileID: 5183740335043943402, guid: 6ea08243948f3ec44b0014e93a56d1fb, type: 3}
+  _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
+    \u0436\u0435\u043B\u0435\u0437\u0430?"
+  _priceText: "100 \u043C\u043E\u043D\u0435\u0442\u043E\u043A"
+  _price: 100
+  _buildTemplate: {fileID: 3936931927319937114, guid: 3fb4139ce50e1c946a0aafb1bd5de679, type: 3}

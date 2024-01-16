@@ -49,4 +49,8 @@ public class BuyButton : MonoBehaviour
         _banner = banner;
     }
 
+    public void SetTrigger(BuyTrigger trigger)
+    {
+        _spawnPosition = trigger;
+    }
 }
