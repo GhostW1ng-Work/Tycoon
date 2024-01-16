@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class PlayerWallet : MonoBehaviour
 {
-    private int _coinsCount;
+    private int _coinsCount = 1000;
 
-    public void SpendMoney(int spendAmount)
+    public void TrySpendMoney(int spendAmount)
     {
         if(_coinsCount >= spendAmount)
         {
             _coinsCount -= spendAmount;
+        }
+        else
+        {
+            print("Бабла недостаточно");
         }
     }
 

@@ -5,7 +5,9 @@ public class Banner : ScriptableObject
 {
     [SerializeField] private string _buyText;
     [SerializeField] private string _priceText;
+    [SerializeField] private int _price;
 
     public string BuyText => _buyText;
     public string PriceText => _priceText;
+    public int Price => _price;
 }

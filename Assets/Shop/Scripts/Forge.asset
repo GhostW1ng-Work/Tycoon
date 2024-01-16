@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buyText: "\u0410\u0431\u0438\u0431\u0430 \u0431\u0430\u0431\u0430?"
   _priceText: "25 \u0431\u0438\u0431\u0438\u043A\u043E\u0432"
+  _price: 25

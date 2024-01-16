@@ -1,10 +1,12 @@
 using UnityEngine;
 using TMPro;
+
 public class BannerShower : MonoBehaviour
 {
     [SerializeField] private CanvasGroup _buyPanel;
     [SerializeField] private TMP_Text _buyText;
     [SerializeField] private TMP_Text _priceText;
+    [SerializeField] private BuyButton _buyButton;
 
     public void EnablePanel()
     {
@@ -24,5 +26,6 @@ public class BannerShower : MonoBehaviour
     {
         _buyText.text = banner.BuyText;
         _priceText.text = banner.PriceText;
+        _buyButton.SetPrice(banner.Price);
     }
 }
