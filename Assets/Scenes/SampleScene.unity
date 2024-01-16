@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
   _bannerShower: {fileID: 1730666838}
+  _buyButton: {fileID: 252173878}
 --- !u!1 &252173873
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallet: {fileID: 3547763875127910392}
+  _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
+  _spawnPosition: {fileID: 108759946}
+  _offsetZ: 2
 --- !u!1 &416219650
 GameObject:
   m_ObjectHideFlags: 0

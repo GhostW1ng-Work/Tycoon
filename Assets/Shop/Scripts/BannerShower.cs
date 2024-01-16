@@ -8,6 +8,22 @@ public class BannerShower : MonoBehaviour
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private BuyButton _buyButton;
 
+
+    private void OnEnable()
+    {
+        _buyButton.BuildingBuyed += OnBuildingBuyed;
+    }
+
+    private void OnDisable()
+    {
+        _buyButton.BuildingBuyed -= OnBuildingBuyed;
+    }
+
+    private void OnBuildingBuyed()
+    {
+        Destroy(gameObject);
+    }
+
     public void EnablePanel()
     {
         _buyPanel.alpha = 1;
@@ -27,5 +43,6 @@ public class BannerShower : MonoBehaviour
         _buyText.text = banner.BuyText;
         _priceText.text = banner.PriceText;
         _buyButton.SetPrice(banner.Price);
+        _buyButton.SetBanner(banner);
     }
 }

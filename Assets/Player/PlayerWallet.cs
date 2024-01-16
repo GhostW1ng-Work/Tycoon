@@ -4,15 +4,16 @@ public class PlayerWallet : MonoBehaviour
 {
     private int _coinsCount = 1000;
 
-    public void TrySpendMoney(int spendAmount)
+    public bool TrySpendMoney(int spendAmount)
     {
         if(_coinsCount >= spendAmount)
         {
             _coinsCount -= spendAmount;
+            return true;
         }
         else
         {
-            print("Бабла недостаточно");
+            return false;
         }
     }
 
