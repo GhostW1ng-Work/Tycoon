@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6688536488968680491}
   - component: {fileID: 3701662703718076811}
+  - component: {fileID: -5761317797741872301}
   m_Layer: 0
   m_Name: SilverBar
   m_TagString: Untagged
@@ -136,3 +137,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5761317797741872301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4259141506610657389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b111563055ecd24fba6ace049d79607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
