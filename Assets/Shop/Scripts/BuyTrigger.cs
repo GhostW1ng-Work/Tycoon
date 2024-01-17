@@ -5,6 +5,7 @@ public class BuyTrigger : MonoBehaviour
     [SerializeField] private Banner _banner;
     [SerializeField] private BannerShower _bannerShower;
     [SerializeField] private BuyButton _buyButton;
+    [SerializeField] private bool _isAnvil;
 
     public void SubcribeToOnBuildingBuyed()
     {
@@ -32,6 +33,8 @@ public class BuyTrigger : MonoBehaviour
         {
             _bannerShower.SetBanner(_banner);
             _buyButton.SetTrigger(this);
+            if (_isAnvil)
+                _buyButton.SetBuyType(BuyButton.BuyTypes.BuyAnvil);
             SubcribeToOnBuildingBuyed();
             _bannerShower.EnablePanel();
         }

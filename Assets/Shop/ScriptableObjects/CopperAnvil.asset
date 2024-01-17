@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
+  m_Name: CopperAnvil
+  m_EditorClassIdentifier: 
+  _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044E?"
+  _priceText: "25 \u043C\u043E\u043D\u0435\u0442\u043E\u043A"
+  _price: 25
+  _buildTemplate: {fileID: 3934096075595287648, guid: 61b1f3d101c578d45ad82bdd9ad862e4, type: 3}

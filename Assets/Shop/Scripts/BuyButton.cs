@@ -1,17 +1,30 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+
+
+
 public class BuyButton : MonoBehaviour
 {
+    public enum BuyTypes
+    {
+        Buy,
+        BuyAnvil,
+        Upgrade
+    }
+
     [SerializeField] private PlayerWallet _wallet;
     [SerializeField] private Banner _banner;
+    [SerializeField] private BannerShower _bannerShower;
     [SerializeField] private BuyTrigger _spawnPosition;
     [SerializeField] private float _offsetZ = 2;
 
+    private BuyTypes _type;
     private int _price;
     private Button _button;
 
-    public event Action BuildingBuyed; 
+    public event Action BuildingBuyed;
+    public event Action AnvilUpgraded;
 
     private void Awake()
     {
@@ -32,10 +45,29 @@ public class BuyButton : MonoBehaviour
     {
         if (_wallet.TrySpendMoney(_price))
         {
-            var forge = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x, 
-                _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0,180,0));
-            forge.transform.parent = null;
-            BuildingBuyed?.Invoke();
+            switch (_type)
+            {
+                case BuyTypes.Buy:
+                    if (_wallet.TrySpendMoney(_price))
+                    {
+                        var forge = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
+                            _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
+                        forge.transform.parent = null;
+                        BuildingBuyed?.Invoke();
+                    }
+                    break;
+                case BuyTypes.BuyAnvil:
+                    var anvil = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
+    _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
+                    AnvilUpgrader anvilUpgrader = anvil.GetComponentInChildren<AnvilUpgrader>();
+                    anvilUpgrader.Initialize(_bannerShower, this);
+                    anvilUpgrader.transform.parent = null;
+                    BuildingBuyed?.Invoke();
+                    break;
+                case BuyTypes.Upgrade:
+                    AnvilUpgraded?.Invoke();
+                    break;
+            }
         }
     }
 
@@ -52,5 +84,10 @@ public class BuyButton : MonoBehaviour
     public void SetTrigger(BuyTrigger trigger)
     {
         _spawnPosition = trigger;
+    }
+
+    public void SetBuyType(BuyTypes type)
+    {
+        _type = type;
     }
 }

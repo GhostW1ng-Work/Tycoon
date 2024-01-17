@@ -237,6 +237,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _isAnvil: 0
 --- !u!1 &252173873
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wallet: {fileID: 3547763875127910392}
   _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
+  _bannerShower: {fileID: 1730666838}
   _spawnPosition: {fileID: 108759946}
   _offsetZ: 2
 --- !u!1 &416219650
@@ -680,6 +682,121 @@ Transform:
   m_Father: {fileID: 981825239}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &662847521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 662847525}
+  - component: {fileID: 662847524}
+  - component: {fileID: 662847523}
+  - component: {fileID: 662847522}
+  m_Layer: 0
+  m_Name: BuyAnvil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &662847522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662847521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191244401aa32314a87587fbdc2dacce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _banner: {fileID: 11400000, guid: 75a465fa66dcdf745aa360a31be48074, type: 2}
+  _bannerShower: {fileID: 1730666838}
+  _buyButton: {fileID: 252173878}
+  _isAnvil: 1
+--- !u!65 &662847523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662847521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.073466, y: 8.618337, z: 1.1849058}
+  m_Center: {x: 0.15017658, y: -0.061911937, z: -0.49245298}
+--- !u!212 &662847524
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662847521}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 27fdbb52ac6c3f948bf9ddfae2cbc190, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &662847525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662847521}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -5.36, y: 0.01, z: -4.35}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &695595772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1162,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 339a49471bbfa874ea3d62948e642c45, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _isAnvil: 0
 --- !u!65 &903128540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1449,6 +1567,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 0fe48859b211b4841a7b15f5e4bd4fd7, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _isAnvil: 0
 --- !u!65 &1369411938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1643,6 +1762,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: c50514b22407c4044818b6200fbb40fb, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _isAnvil: 0
 --- !u!65 &1605498527
 BoxCollider:
   m_ObjectHideFlags: 0
