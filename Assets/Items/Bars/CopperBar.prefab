@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4725965745745882997}
   - component: {fileID: 6204926848384189291}
   - component: {fileID: -972595446445308874}
-  - component: {fileID: 1043842694}
   m_Layer: 0
   m_Name: CopperBar
   m_TagString: Untagged
@@ -67,19 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b111563055ecd24fba6ace049d79607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &1043842694
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136843990498107822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2222735538850056667
 GameObject:
   m_ObjectHideFlags: 0

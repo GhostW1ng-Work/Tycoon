@@ -94,6 +94,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 195126075135880631}
+  - component: {fileID: 8554118939761375168}
+  - component: {fileID: 2150056582926036145}
+  - component: {fileID: 8213444807139137069}
   m_Layer: 0
   m_Name: GoldForge
   m_TagString: Untagged
@@ -123,6 +126,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8554118939761375168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195126075135880630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01e118058065384d817564b2e77327f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bar: {fileID: 8918044060049121317, guid: d17d53029b3980d4eb5e80a06d0bcb7b, type: 3}
+  _giver: {fileID: 2150056582926036145}
+  _spawnPoint: {fileID: 7636931867688178209}
+  _minSpawnTime: 2
+  _maxSpawnTime: 5
+  _maxItemsCount: 5
+--- !u!114 &2150056582926036145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195126075135880630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7dd885973a57b4989cd123f70e06ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bars: []
+  _spawner: {fileID: 8554118939761375168}
+--- !u!65 &8213444807139137069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195126075135880630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0636065, y: 1.693264, z: 0.61208296}
+  m_Center: {x: -0.060790658, y: 0.8180988, z: 1.0201964}
 --- !u!1 &195126075257352427
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +681,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7636931867688178209}
+  - component: {fileID: 6467020244955264285}
+  - component: {fileID: 394847681776508877}
   m_Layer: 0
   m_Name: SpawnPosition
   m_TagString: Untagged
@@ -655,3 +705,35 @@ Transform:
   m_Father: {fileID: 195126075135880631}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6467020244955264285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502793554226638496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01e118058065384d817564b2e77327f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bar: {fileID: 0}
+  _giver: {fileID: 394847681776508877}
+  _spawnPoint: {fileID: 7636931867688178209}
+  _minSpawnTime: 0
+  _maxSpawnTime: 0
+  _maxItemsCount: 0
+--- !u!114 &394847681776508877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502793554226638496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7dd885973a57b4989cd123f70e06ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bars: []
+  _spawner: {fileID: 6467020244955264285}

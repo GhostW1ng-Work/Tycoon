@@ -8,11 +8,10 @@ public class PlayerBag : MonoBehaviour
 
     private int _currentItems;
 
-    public bool TryAddItem(Item item)
+    public void TryAddItem(Item item)
     {
         if (_currentItems < _maxCapacity)
         {
-
             item.transform.DOMove(_bagTransform.position, 0.1f).OnComplete(
                 () =>
                 {
@@ -22,11 +21,6 @@ public class PlayerBag : MonoBehaviour
                     _currentItems++;
                 }
                 );
-            return true;
-        }
-        else
-        {
-            return false;
         }
     }
 }

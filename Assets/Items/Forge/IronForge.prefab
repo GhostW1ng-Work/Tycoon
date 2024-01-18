@@ -40,6 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3936931927319937061}
+  - component: {fileID: 6404413725013753960}
+  - component: {fileID: 4508791456161890042}
+  - component: {fileID: 3500872649176339728}
   m_Layer: 0
   m_Name: IronForge
   m_TagString: Untagged
@@ -69,6 +72,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6404413725013753960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936931927319937114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7dd885973a57b4989cd123f70e06ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bars: []
+  _spawner: {fileID: 4508791456161890042}
+--- !u!114 &4508791456161890042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936931927319937114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01e118058065384d817564b2e77327f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bar: {fileID: -2561527885328333740, guid: 6850d4c139fcb654394284dc06831f18, type: 3}
+  _giver: {fileID: 6404413725013753960}
+  _spawnPoint: {fileID: 7720370449841052992}
+  _minSpawnTime: 2
+  _maxSpawnTime: 5
+  _maxItemsCount: 5
+--- !u!65 &3500872649176339728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936931927319937114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0636065, y: 1.693264, z: 0.61208296}
+  m_Center: {x: -0.060790658, y: 0.8180988, z: 1.0201964}
 --- !u!1 &3936931927528556029
 GameObject:
   m_ObjectHideFlags: 0
