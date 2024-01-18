@@ -25,7 +25,7 @@ public class BarSpawners : MonoBehaviour
             if(_currentSpawnTime <= 0)
             {
                 Bar bar = Instantiate(_bar, new Vector3
-                    (_spawnPoint.position.x,0.155f * _currentItemsCount, _spawnPoint.position.z), Quaternion.identity);
+                    (_spawnPoint.position.x,0.155f * _currentItemsCount, _spawnPoint.position.z), Quaternion.Euler(0,90,0));
                 _giver.AddBar(bar);
                 _currentItemsCount++;
                 _currentSpawnTime = Random.Range(_minSpawnTime, _maxSpawnTime);
