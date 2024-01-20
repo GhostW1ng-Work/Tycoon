@@ -59,9 +59,6 @@ public class BuyButton : MonoBehaviour
                 case BuyTypes.BuyAnvil:
                     var anvil = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
     _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
-                    AnvilUpgrader anvilUpgrader = anvil.GetComponentInChildren<AnvilUpgrader>();
-                    anvilUpgrader.Initialize(_bannerShower, this);
-                    anvilUpgrader.transform.parent = null;
                     BuildingBuyed?.Invoke();
                     break;
                 case BuyTypes.Upgrade:

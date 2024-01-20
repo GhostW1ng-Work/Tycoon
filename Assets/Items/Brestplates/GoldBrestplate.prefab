@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5102122887328947983}
   - component: {fileID: 5837356017749646898}
   - component: {fileID: 7819022039595768870}
-  - component: {fileID: 8893623953538853836}
   m_Layer: 0
   m_Name: Armor_1_White_Part_1
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8893623953538853836
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964044357936799362}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8256914927586559298, guid: ba3647862c86b7f47a03ff4333800d52, type: 3}
 --- !u!1 &8849088011573786509
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +127,6 @@ GameObject:
   - component: {fileID: 3367286776854091691}
   - component: {fileID: 5689902008391041721}
   - component: {fileID: 443733232083064103}
-  - component: {fileID: 8352445515473025023}
   m_Layer: 0
   m_Name: Armor_1_White_Part_2
   m_TagString: Untagged
@@ -215,17 +199,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8352445515473025023
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9013266425245139687}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7402834635338020250, guid: ba3647862c86b7f47a03ff4333800d52, type: 3}

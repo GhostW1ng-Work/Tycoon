@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5404986248204693508}
+  - component: {fileID: 760109000473888506}
   m_Layer: 0
   m_Name: SilverHelmet
   m_TagString: Untagged
@@ -34,6 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760109000473888506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632390885494811326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1644f33dcec8c8d4c895981ff1143f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemType: 0
+  _startPosition: {x: 0, y: 0.15, z: 0}
+  _price: 150
 --- !u!1 &5109220780866312125
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +61,6 @@ GameObject:
   - component: {fileID: 8610801083214322168}
   - component: {fileID: 2962200639239321970}
   - component: {fileID: 3517719813804144354}
-  - component: {fileID: 3824256617637224979}
   m_Layer: 0
   m_Name: Armor_3_White_Part_3
   m_TagString: Untagged
@@ -118,20 +133,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3824256617637224979
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5109220780866312125}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6599807726125414069, guid: c6424f8ee46cc2747b654c4d57f4fbf9, type: 3}
 --- !u!1 &6103524533000480818
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +144,6 @@ GameObject:
   - component: {fileID: 3521503946474785950}
   - component: {fileID: 1163410100524082732}
   - component: {fileID: 3440920997707207906}
-  - component: {fileID: 6449882349687280264}
   m_Layer: 0
   m_Name: Armor_3_White_Part_2
   m_TagString: Untagged
@@ -216,20 +216,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6449882349687280264
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6103524533000480818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3998072204165884670, guid: c6424f8ee46cc2747b654c4d57f4fbf9, type: 3}
 --- !u!1 &7113539273426624050
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +227,6 @@ GameObject:
   - component: {fileID: 3185129986118486325}
   - component: {fileID: 8719240588390041640}
   - component: {fileID: 3509175925204382157}
-  - component: {fileID: 6532268539463899965}
   m_Layer: 0
   m_Name: Armor_3_White_Part_1
   m_TagString: Untagged
@@ -314,17 +299,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6532268539463899965
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7113539273426624050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -73948067621240222, guid: c6424f8ee46cc2747b654c4d57f4fbf9, type: 3}
