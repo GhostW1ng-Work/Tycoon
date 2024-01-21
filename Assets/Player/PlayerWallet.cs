@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerWallet : MonoBehaviour
 {
-    private int _coinsCount = 100000;
+    private int _coinsCount = 0;
 
     public bool TrySpendMoney(int spendAmount)
     {

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044E?"
   _priceText: "25 \u043C\u043E\u043D\u0435\u0442\u043E\u043A"
-  _price: 25
+  _price: 0
   _buildTemplate: {fileID: 3934096075595287648, guid: 61b1f3d101c578d45ad82bdd9ad862e4, type: 3}

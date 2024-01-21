@@ -130,3 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemType: 1
   _startPosition: {x: 0, y: 0, z: 0}
+  _meshRenderer: {fileID: 1443544900818363303}

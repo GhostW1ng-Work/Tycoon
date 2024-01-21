@@ -31,15 +31,19 @@ public class PlayerBag : MonoBehaviour
         }
     }
 
-    public int RemoveItems()
+    public int GetItemsCount()
     {
-        int itemsCount = 0;
-        foreach (var item in _items)
-        {
-            Destroy(item.gameObject);
-            itemsCount++;
-        }
-        return itemsCount;
-        _items.Clear();
+        return _items.Count;
+    }
+
+    public Item GetFirstItem()
+    {
+        return _items[0];
+    }
+
+    public void RemoveItem()
+    {
+        Destroy(_items[0].gameObject);
+        _items.RemoveAt(0);
     }
 }

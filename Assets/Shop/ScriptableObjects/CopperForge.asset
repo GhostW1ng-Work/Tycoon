@@ -15,5 +15,5 @@ MonoBehaviour:
   _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
     \u043C\u0435\u0434\u0438?"
   _priceText: "25 \u043C\u043E\u043D\u0435\u0442\u043E\u043A"
-  _price: 25
+  _price: 0
   _buildTemplate: {fileID: 5183740335043943402, guid: 6ea08243948f3ec44b0014e93a56d1fb, type: 3}

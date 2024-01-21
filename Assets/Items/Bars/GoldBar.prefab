@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemType: 3
   _startPosition: {x: 0, y: 0, z: 0}
+  _meshRenderer: {fileID: 2475434019638539128}
 --- !u!1 &2453057036788806980
 GameObject:
   m_ObjectHideFlags: 0

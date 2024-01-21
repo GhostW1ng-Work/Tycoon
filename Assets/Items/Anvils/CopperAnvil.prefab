@@ -115,7 +115,12 @@ MonoBehaviour:
   _craftItem: {fileID: 1842219628126070326, guid: 7f33ac3d0ca224f4ab26ae516e44f9bf, type: 3}
   _container: {fileID: 8190173907522632133}
   _itemPosition: {fileID: 543200693395459361}
-  _resourcesCount: 2
+  _maxItemsCount: 5
+  _materials:
+  - {fileID: 2100000, guid: 166ec18530d372a4abcee05ccd4389c7, type: 2}
+  - {fileID: 2100000, guid: c5a7264b8b3ba57499503419a33e06f3, type: 2}
+  - {fileID: 2100000, guid: 5e50cf7a6de0af843ac1d649ee89152a, type: 2}
+  - {fileID: 2100000, guid: 76e3cb3c0b42d8941b37de4cbb748f67, type: 2}
 --- !u!1 &3934096075595287648
 GameObject:
   m_ObjectHideFlags: 0
