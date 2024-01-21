@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2870078060230368347}
   m_Layer: 0
-  m_Name: CopperAxe
+  m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

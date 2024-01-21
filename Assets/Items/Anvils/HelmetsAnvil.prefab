@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 755686304387357055}
   - component: {fileID: 3285459462272462261}
   m_Layer: 0
-  m_Name: CopperAnvil
+  m_Name: HelmetsAnvil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
