@@ -43,7 +43,7 @@ public class BannerShower : MonoBehaviour
     public void SetBanner(Banner banner)
     {
         _buyText.text = banner.BuyText;
-        _priceText.text = banner.PriceText;
+        _priceText.text = $"{banner.Price} монеток";
         _buyButton.SetPrice(banner.Price);
         _buyButton.SetBanner(banner);
         _buyButton.SetBuyType(BuyButton.BuyTypes.Buy);
