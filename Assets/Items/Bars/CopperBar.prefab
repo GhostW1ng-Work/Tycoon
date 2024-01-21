@@ -48,6 +48,8 @@ MonoBehaviour:
   _itemType: 0
   _startPosition: {x: 0, y: 0, z: 0}
   _meshRenderer: {fileID: 1324424204682859119}
+  _rotationAfterCreate: {x: 0, y: 90, z: 0}
+  _prices: 
 --- !u!1 &2222735538850056667
 GameObject:
   m_ObjectHideFlags: 0

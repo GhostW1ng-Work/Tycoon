@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 762439293880080648}
   - component: {fileID: 762439293880080651}
   - component: {fileID: 762439293880080650}
-  - component: {fileID: 762439293880080649}
   m_Layer: 0
   m_Name: Shield_1_White_Part_2
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &762439293880080649
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762439293880080647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4967253285140180747, guid: 6cdbd2201e5c5b241baf5890fb0ad147, type: 3}
 --- !u!1 &762439294478631519
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +94,6 @@ GameObject:
   - component: {fileID: 762439294478631456}
   - component: {fileID: 762439294478631459}
   - component: {fileID: 762439294478631458}
-  - component: {fileID: 762439294478631457}
   m_Layer: 0
   m_Name: Shield_1_White_Part_1
   m_TagString: Untagged
@@ -182,20 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &762439294478631457
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762439294478631519}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5552851005905848154, guid: 6cdbd2201e5c5b241baf5890fb0ad147, type: 3}
 --- !u!1 &762439295791865986
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 762439295791865987}
+  - component: {fileID: 1406341440736458294}
   m_Layer: 0
   m_Name: CopperShield
   m_TagString: Untagged
@@ -221,11 +192,28 @@ Transform:
   m_GameObject: {fileID: 762439295791865986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.589, y: 0.6000001, z: 3.6291337}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 762439294478631456}
   - {fileID: 762439293880080648}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406341440736458294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762439295791865986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1644f33dcec8c8d4c895981ff1143f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemType: 0
+  _startPosition: {x: 0, y: 0, z: 0}
+  _meshRenderer: {fileID: 762439293880080650}
+  _rotationAfterCreate: {x: 90, y: 0, z: 90}
+  _prices: 050000000a00000032000000f4010000

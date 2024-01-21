@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5573708333714061449}
   - component: {fileID: 8860288728651151148}
   - component: {fileID: 6706676706271740902}
-  - component: {fileID: 3477607655990035407}
+  - component: {fileID: -5612414969007492632}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -84,17 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3477607655990035407
-MeshCollider:
+--- !u!114 &-5612414969007492632
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5049127400191386163}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7983878246839791379, guid: 3855b63c5a0b1a041a1acca8eb229d9b, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1644f33dcec8c8d4c895981ff1143f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemType: 0
+  _startPosition: {x: 0, y: 0, z: 0}
+  _meshRenderer: {fileID: 6706676706271740902}
+  _rotationAfterCreate: {x: 90, y: 0, z: 90}
+  _prices: 050000000a00000032000000f4010000

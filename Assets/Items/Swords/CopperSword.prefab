@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3360568574348690933}
   - component: {fileID: 1886112550843278362}
   - component: {fileID: 2890575270793542657}
-  - component: {fileID: 5550508024368991253}
   m_Layer: 0
   m_Name: Sword_2_Red_Part_2
   m_TagString: Untagged
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5550508024368991253
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752947599032042208}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7767533279548044944, guid: 189134d25a06e4e4ebf13946aabf7157, type: 3}
 --- !u!1 &1304444017347513886
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +94,6 @@ GameObject:
   - component: {fileID: 4803809378168868724}
   - component: {fileID: 6689202894568178421}
   - component: {fileID: 2717718089841988204}
-  - component: {fileID: 3590752994744968015}
   m_Layer: 0
   m_Name: Sword_2_Red_Part_3
   m_TagString: Untagged
@@ -182,20 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3590752994744968015
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304444017347513886}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9053048121391734924, guid: 189134d25a06e4e4ebf13946aabf7157, type: 3}
 --- !u!1 &5719864757407884855
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4911978164074511501}
+  - component: {fileID: 9087685479765894666}
   m_Layer: 0
   m_Name: CopperSword
   m_TagString: Untagged
@@ -221,8 +192,8 @@ Transform:
   m_GameObject: {fileID: 5719864757407884855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.47945282, y: 0.5999997, z: 3.0635295}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2948332152588306985}
   - {fileID: 3360568574348690933}
@@ -230,6 +201,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9087685479765894666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719864757407884855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1644f33dcec8c8d4c895981ff1143f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemType: 0
+  _startPosition: {x: 0, y: 0, z: 0}
+  _meshRenderer: {fileID: 4884002134318133313}
+  _rotationAfterCreate: {x: 90, y: 0, z: 90}
+  _prices: 050000000a00000032000000f4010000
 --- !u!1 &7255237492162134517
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +229,6 @@ GameObject:
   - component: {fileID: 2948332152588306985}
   - component: {fileID: 600912210486925200}
   - component: {fileID: 4884002134318133313}
-  - component: {fileID: 5564500243060650432}
   m_Layer: 0
   m_Name: Sword_2_Red_Part_1
   m_TagString: Untagged
@@ -314,17 +301,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5564500243060650432
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7255237492162134517}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3879319929768434010, guid: 189134d25a06e4e4ebf13946aabf7157, type: 3}

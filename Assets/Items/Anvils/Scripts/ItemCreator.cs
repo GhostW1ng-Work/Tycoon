@@ -33,7 +33,7 @@ public class ItemCreator : MonoBehaviour
         var newItem = Instantiate(_craftItem, new Vector3
             (_itemPosition.position.x,
             _craftItem.StartPosition.y * _currentItemsCount,
-            _itemPosition.position.z), Quaternion.identity);
+            _itemPosition.position.z), Quaternion.Euler(_craftItem.RotationAfterCreate));
         newItem.SetItemtype(_materials[(int)bar.ItemType], bar.ItemType);
         _container.AddItem(newItem);
     }

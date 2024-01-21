@@ -131,3 +131,5 @@ MonoBehaviour:
   _itemType: 2
   _startPosition: {x: 0, y: 0, z: 0}
   _meshRenderer: {fileID: 816742364315834931}
+  _rotationAfterCreate: {x: 0, y: 90, z: 0}
+  _prices: 

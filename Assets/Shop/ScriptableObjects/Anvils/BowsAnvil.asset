@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
-  m_Name: HelmetAnvil
+  m_Name: BowsAnvil
   m_EditorClassIdentifier: 
-  _buyText: "\u041D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044F \u0428\u043B\u0435\u043C\u043E\u0432"
+  _buyText: "\u041D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044F \u041B\u0443\u043A\u043E\u0432"
   _price: 0
-  _buildTemplate: {fileID: 3934096075595287648, guid: 61b1f3d101c578d45ad82bdd9ad862e4, type: 3}
+  _buildTemplate: {fileID: 3934096075595287648, guid: 68701333a4603cd43b2f97b0dd436dad, type: 3}

@@ -24,7 +24,7 @@ public class PlayerBag : MonoBehaviour
                 {
                     item.transform.SetParent(_bagTransform, true);
                     item.transform.localPosition = new Vector3(0, 0.155f * _items.Count, 0);
-                    item.transform.localRotation = Quaternion.Euler(new Vector3(0, 90, 0));
+                    item.transform.localRotation = Quaternion.Euler(item.RotationAfterCreate);
                 }
                 );
             _items.Add(item);
