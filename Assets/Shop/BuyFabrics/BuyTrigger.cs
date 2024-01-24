@@ -33,8 +33,6 @@ public class BuyTrigger : MonoBehaviour
         {
             _bannerShower.SetBanner(_banner);
             _buyButton.SetTrigger(this);
-            if (_isAnvil)
-                _buyButton.SetBuyType(BuyButton.BuyTypes.BuyAnvil);
             SubcribeToOnBuildingBuyed();
             _bannerShower.EnablePanel();
         }

@@ -12,13 +12,11 @@ public class BannerShower : MonoBehaviour
     private void OnEnable()
     {
         _buyButton.BuildingBuyed += OnBuildingBuyed;
-        _buyButton.AnvilUpgraded += OnBuildingBuyed;
     }
 
     private void OnDisable()
     {
         _buyButton.BuildingBuyed -= OnBuildingBuyed;
-        _buyButton.AnvilUpgraded -= OnBuildingBuyed;
     }
 
     private void OnBuildingBuyed()
@@ -46,14 +44,5 @@ public class BannerShower : MonoBehaviour
         _priceText.text = $"{banner.Price} монеток";
         _buyButton.SetPrice(banner.Price);
         _buyButton.SetBanner(banner);
-        _buyButton.SetBuyType(BuyButton.BuyTypes.Buy);
-    }
-
-    public void SetAnvilLevel(AnvilLevel anvilLevel)
-    {
-        _buyText.text = anvilLevel.BuyText;
-        _priceText.text = anvilLevel.PriceText;
-        _buyButton.SetPrice(anvilLevel.Price);
-        _buyButton.SetBuyType(BuyButton.BuyTypes.Upgrade);
     }
 }
