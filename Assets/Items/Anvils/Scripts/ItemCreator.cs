@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using DG.Tweening;
 public class ItemCreator : MonoBehaviour
 {
     [SerializeField] private Bar _bar;
@@ -10,7 +10,6 @@ public class ItemCreator : MonoBehaviour
     [SerializeField] private Material[] _materials;
 
     private int _currentItemsCount;
-
 
     private void OnTriggerEnter(Collider other)
     {

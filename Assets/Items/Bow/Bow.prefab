@@ -100,4 +100,4 @@ MonoBehaviour:
   _startPosition: {x: 0, y: 0, z: 0}
   _meshRenderer: {fileID: 6706676706271740902}
   _rotationAfterCreate: {x: 90, y: 0, z: 90}
-  _prices: 050000000a00000032000000f4010000
+  _prices: 0a00000032000000fa000000f4010000

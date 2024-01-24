@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ShieldsAnvil
   m_EditorClassIdentifier: 
   _buyText: "\u041D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044F \u0429\u0438\u0442\u043E\u0432"
-  _price: 0
+  _price: 100
   _buildTemplate: {fileID: 3934096075595287648, guid: f222ec202f9380c4eb4514daede1c71a, type: 3}

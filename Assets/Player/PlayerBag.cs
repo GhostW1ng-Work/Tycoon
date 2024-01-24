@@ -1,7 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections.Generic;
-using System;
 
 public class PlayerBag : MonoBehaviour
 {
@@ -43,7 +42,16 @@ public class PlayerBag : MonoBehaviour
 
     public void RemoveItem()
     {
-        Destroy(_items[0].gameObject);
-        _items.RemoveAt(0);
+        if (_items.Count > 0)
+        {
+            _items[0].transform.DOMove(_bagTransform.position, 0.1f).OnComplete(
+                () =>
+                {
+                    Destroy(_items[0].gameObject);
+                    _items.RemoveAt(0);
+                }
+                );
+        }
+
     }
 }

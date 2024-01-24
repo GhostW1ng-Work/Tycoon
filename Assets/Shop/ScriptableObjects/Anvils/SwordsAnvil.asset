@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordsAnvil
   m_EditorClassIdentifier: 
   _buyText: "\u041D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044F \u041C\u0435\u0447\u0435\u0439"
-  _price: 0
+  _price: 300
   _buildTemplate: {fileID: 3934096075595287648, guid: 84fdcaad2c17bf443beea018407bbf53, type: 3}
