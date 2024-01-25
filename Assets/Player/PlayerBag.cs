@@ -9,6 +9,12 @@ public class PlayerBag : MonoBehaviour
 
     private List<Item> _items;
 
+    private int _currentLevel = 1;
+    private int _maxLevel = 6;
+
+    public int CurrentLevel => _currentLevel;
+    public int MaxLevel => _maxLevel;
+
     private void Start()
     {
         _items = new List<Item>();
@@ -53,5 +59,11 @@ public class PlayerBag : MonoBehaviour
                 );
         }
 
+    }
+
+    public void IncreaseMaxCapacity()
+    {
+        _currentLevel++;
+        _maxCapacity++;
     }
 }

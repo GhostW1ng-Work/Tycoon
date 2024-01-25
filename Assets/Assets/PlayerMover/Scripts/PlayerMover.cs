@@ -13,7 +13,11 @@ public class PlayerMover : MonoBehaviour
     private Vector2 _currentMovementInput;
     private Vector3 _currentMovement;
     private bool _isMovementPressed;
+    private int _currentLevel = 1;
+    private int _maxLevel = 6;
 
+    public int CurrentLevel => _currentLevel;
+    public int MaxLevel => _maxLevel;
     public float MoveSpeed => _currentMoveSpeed;
 
     private void Awake()
@@ -65,5 +69,11 @@ public class PlayerMover : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
             transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, _rotationFactorPerFrame * Time.deltaTime);
         }
+    }
+
+    public void IncreaseMoveSpeed()
+    {
+        _currentLevel++;
+        _currentMoveSpeed++;
     }
 }
