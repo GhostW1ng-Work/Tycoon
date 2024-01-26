@@ -779,6 +779,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
   _bannerShower: {fileID: 1730666838}
   _spawnPosition: {fileID: 108759946}
+  _system: {fileID: 19863498, guid: d59453060233d2f49884f7de0b768335, type: 3}
   _offsetZ: 2
 --- !u!1 &264420859
 GameObject:

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemType: 0
-  _startPosition: {x: 0, y: 0, z: 0}
+  _startPosition: {x: 0, y: 0.3, z: 0}
   _meshRenderer: {fileID: 7437704984415751578}
   _rotationAfterCreate: {x: 90, y: 0, z: 90}
   _prices: 64000000f4010000dc050000b80b0000

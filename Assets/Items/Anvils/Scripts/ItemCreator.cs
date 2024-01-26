@@ -1,5 +1,5 @@
 using UnityEngine;
-using DG.Tweening;
+
 public class ItemCreator : MonoBehaviour
 {
     [SerializeField] private Bar _bar;
@@ -7,6 +7,7 @@ public class ItemCreator : MonoBehaviour
     [SerializeField] private ItemContainer _container;
     [SerializeField] private Transform _itemPosition;
     [SerializeField] private int _maxItemsCount;
+    [SerializeField] private ParticleSystem _system;
     [SerializeField] private Material[] _materials;
 
     private int _currentItemsCount;
@@ -33,6 +34,13 @@ public class ItemCreator : MonoBehaviour
             (_itemPosition.position.x,
             _craftItem.StartPosition.y * _currentItemsCount,
             _itemPosition.position.z), Quaternion.Euler(_craftItem.RotationAfterCreate));
+
+        Instantiate(_system, new Vector3
+            (_itemPosition.position.x,
+            _craftItem.StartPosition.y * _currentItemsCount,
+            _itemPosition.position.z), Quaternion.Euler(0,0,0));
+
+
         newItem.SetItemtype(_materials[(int)bar.ItemType], bar.ItemType);
         _container.AddItem(newItem);
     }

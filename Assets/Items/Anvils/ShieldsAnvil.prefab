@@ -116,6 +116,7 @@ MonoBehaviour:
   _container: {fileID: 8190173907522632133}
   _itemPosition: {fileID: 543200693395459361}
   _maxItemsCount: 5
+  _system: {fileID: 198319247725527338, guid: 0e1c7fb597c927a41893518fb7dc7472, type: 3}
   _materials:
   - {fileID: 2100000, guid: 166ec18530d372a4abcee05ccd4389c7, type: 2}
   - {fileID: 2100000, guid: c5a7264b8b3ba57499503419a33e06f3, type: 2}

@@ -8,6 +8,7 @@ public class BuyButton : MonoBehaviour
     [SerializeField] private Banner _banner;
     [SerializeField] private BannerShower _bannerShower;
     [SerializeField] private BuyTrigger _spawnPosition;
+    [SerializeField] private ParticleSystem _system;
     [SerializeField] private float _offsetZ = 2;
 
     private int _price;
@@ -36,6 +37,10 @@ public class BuyButton : MonoBehaviour
         {
             var forge = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
                 _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
+
+            Instantiate(_system, new Vector3(_spawnPosition.transform.position.x,
+                _spawnPosition.transform.position.y + 1, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 0, 0));
+
             forge.transform.parent = null;
             BuildingBuyed?.Invoke();
         }

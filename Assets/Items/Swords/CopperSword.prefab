@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemType: 0
-  _startPosition: {x: 0, y: 0, z: 0}
+  _startPosition: {x: 0, y: 0.04, z: 0}
   _meshRenderer: {fileID: 4884002134318133313}
   _rotationAfterCreate: {x: 90, y: 0, z: 90}
   _prices: 2800000064000000fa000000f4010000

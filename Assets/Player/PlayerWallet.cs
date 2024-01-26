@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerWallet : MonoBehaviour
 {
-    private int _coinsCount = 1000;
+    private int _coinsCount = 100000;
 
     public int CoinsCount => _coinsCount;
 
