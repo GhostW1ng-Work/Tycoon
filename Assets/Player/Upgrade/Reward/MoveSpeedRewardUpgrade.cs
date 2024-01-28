@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Agava.YandexGames;
 
 public class MoveSpeedRewardUpgrade : RewardUpgradeButton
 {
@@ -8,17 +7,23 @@ public class MoveSpeedRewardUpgrade : RewardUpgradeButton
 
     private void OnEnable()
     {
-        Button.onClick.AddListener(OnUpgrade);
+        Button.onClick.AddListener(ShowReward);
     }
 
     private void OnDisable()
     {
-        Button.onClick.RemoveListener(OnUpgrade);
+        Button.onClick.RemoveListener(ShowReward);
+    }
+
+    private void ShowReward()
+    {
+#if UNITY_WEBGL
+        VideoAd.Show(onRewardedCallback: OnUpgrade);
+#endif
     }
 
     private void OnUpgrade()
     {
-
         if (_mover.CurrentLevel >= _mover.MaxLevel)
         {
             Upgrade.MaxLevelReached?.Invoke();

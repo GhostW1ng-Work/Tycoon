@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class PlayerMover : MonoBehaviour
     public int CurrentLevel => _currentLevel;
     public int MaxLevel => _maxLevel;
     public float MoveSpeed => _currentMoveSpeed;
+    public Action<bool> MovementChanged;
 
     private void Awake()
     {
@@ -52,6 +54,7 @@ public class PlayerMover : MonoBehaviour
         _currentMovement.x = _currentMovementInput.x;
         _currentMovement.z = _currentMovementInput.y;
         _isMovementPressed = _currentMovementInput.x != 0 || _currentMovementInput.y != 0;
+        MovementChanged?.Invoke(_isMovementPressed);
     }
 
     private void HandleRotation()

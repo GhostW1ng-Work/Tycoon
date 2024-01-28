@@ -1,4 +1,6 @@
+using Agava.YandexGames;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,20 +15,35 @@ public class RewardBuyButton : MonoBehaviour
     private Button _button;
 
     public event Action BuildingRewarded;
-
     private void Awake()
     {
         _button = GetComponent<Button>();
     }
 
+    private IEnumerator Start()
+    {
+#if !UNITY_WEBGL || UNITY_EDITOR
+        yield break;
+#endif
+        // Always wait for it if invoking something immediately in the first scene.
+        yield return YandexGamesSdk.Initialize();
+    }
+
     private void OnEnable()
     {
-        _button.onClick.AddListener(OnClick);
+        _button.onClick.AddListener(ShowReward);
     }
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(OnClick);
+        _button.onClick.RemoveListener(ShowReward);
+    }
+
+    private void ShowReward()
+    {
+#if UNITY_WEBGL
+        VideoAd.Show(onRewardedCallback: OnClick);
+#endif
     }
 
     private void OnClick()

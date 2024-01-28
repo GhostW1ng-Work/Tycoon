@@ -1,3 +1,4 @@
+using Agava.YandexGames;
 using UnityEngine;
 
 public class BagRewardUpgradeButton : RewardUpgradeButton
@@ -6,12 +7,19 @@ public class BagRewardUpgradeButton : RewardUpgradeButton
 
     private void OnEnable()
     {
-        Button.onClick.AddListener(OnUpgrade);
+        Button.onClick.AddListener(ShowReward);
     }
 
     private void OnDisable()
     {
-        Button.onClick.RemoveListener(OnUpgrade);
+        Button.onClick.RemoveListener(ShowReward);
+    }
+
+    private void ShowReward()
+    {
+#if UNITY_WEBGL
+        VideoAd.Show(onRewardedCallback: OnUpgrade);
+#endif
     }
 
     private void OnUpgrade()
