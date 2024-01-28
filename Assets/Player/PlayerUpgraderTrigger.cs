@@ -1,13 +1,17 @@
+using System;
 using UnityEngine;
 
 public class PlayerUpgraderTrigger : MonoBehaviour
 {
     [SerializeField] private CanvasGroup _upgradePanel;
 
+    public Action TriggerEntered;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent(out PlayerWallet wallet))
         {
+            TriggerEntered?.Invoke();
             EnablePanel();
         }
     }

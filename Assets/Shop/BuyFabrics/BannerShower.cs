@@ -9,7 +9,6 @@ public class BannerShower : MonoBehaviour
     [SerializeField] private BuyButton _buyButton;
     [SerializeField] private RewardBuyButton _rewardButton;
 
-
     private void OnEnable()
     {
         _buyButton.BuildingBuyed += OnBuildingBuyed;

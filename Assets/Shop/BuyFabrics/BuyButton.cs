@@ -35,6 +35,7 @@ public class BuyButton : MonoBehaviour
     {
         if (_wallet.TrySpendMoney(_price))
         {
+            _spawnPosition.SetIsBuyed(1);
             var forge = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
                 _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
 
@@ -42,6 +43,7 @@ public class BuyButton : MonoBehaviour
                 _spawnPosition.transform.position.y + 1, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 0, 0));
 
             forge.transform.parent = null;
+
             BuildingBuyed?.Invoke();
         }
     }

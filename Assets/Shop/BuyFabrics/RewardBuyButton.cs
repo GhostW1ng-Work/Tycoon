@@ -48,14 +48,16 @@ public class RewardBuyButton : MonoBehaviour
 
     private void OnClick()
     {
-            var forge = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
-                _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
+        _spawnPosition.SetIsBuyed(1);
+        var forge = Instantiate(_banner.BuldTemplate, new Vector3(_spawnPosition.transform.position.x,
+            _spawnPosition.transform.position.y, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 180, 0));
 
-            Instantiate(_system, new Vector3(_spawnPosition.transform.position.x,
-                _spawnPosition.transform.position.y + 1, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 0, 0));
+        Instantiate(_system, new Vector3(_spawnPosition.transform.position.x,
+            _spawnPosition.transform.position.y + 1, _spawnPosition.transform.position.z + _offsetZ), Quaternion.Euler(0, 0, 0));
 
-            forge.transform.parent = null;
-            BuildingRewarded?.Invoke();
+        forge.transform.parent = null;
+
+        BuildingRewarded?.Invoke();
     }
 
 
