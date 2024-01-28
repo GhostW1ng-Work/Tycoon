@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -339,6 +339,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 0
 --- !u!1 &129525956
 GameObject:
@@ -1054,6 +1055,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: b63e716aaae67d24f97d114e1da099c1, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 1
 --- !u!65 &352315853
 BoxCollider:
@@ -2363,6 +2365,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 75a465fa66dcdf745aa360a31be48074, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 1
 --- !u!65 &662847523
 BoxCollider:
@@ -3090,6 +3093,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 339a49471bbfa874ea3d62948e642c45, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 0
 --- !u!65 &903128540
 BoxCollider:
@@ -4302,6 +4306,7 @@ GameObject:
   - component: {fileID: 1251312353}
   - component: {fileID: 1251312352}
   - component: {fileID: 1251312351}
+  - component: {fileID: 1251312354}
   m_Layer: 5
   m_Name: AddBagCapacityButton
   m_TagString: Untagged
@@ -4413,6 +4418,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251312349}
   m_CullTransparentMesh: 1
+--- !u!114 &1251312354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251312349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b61d08d88e5c7499ae6442dc9a70f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Upgrade: {fileID: 1759383346}
+  _bag: {fileID: 3547763875127910393}
 --- !u!1001 &1287670650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4752,6 +4771,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 0fe48859b211b4841a7b15f5e4bd4fd7, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 0
 --- !u!65 &1369411938
 BoxCollider:
@@ -5190,6 +5210,7 @@ GameObject:
   - component: {fileID: 1496195397}
   - component: {fileID: 1496195396}
   - component: {fileID: 1496195395}
+  - component: {fileID: 1496195398}
   m_Layer: 5
   m_Name: AddMoveSpeedButton
   m_TagString: Untagged
@@ -5301,6 +5322,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496195393}
   m_CullTransparentMesh: 1
+--- !u!114 &1496195398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496195393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ed603591127ee40a7eab3f445c4431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Upgrade: {fileID: 268234557}
+  _mover: {fileID: 3547763875127910388}
 --- !u!1001 &1505203202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5622,6 +5657,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: c50514b22407c4044818b6200fbb40fb, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 0
 --- !u!65 &1605498527
 BoxCollider:
@@ -5738,6 +5774,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 3062413fb066e4649a2793a29f6fb002, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 1
 --- !u!65 &1611665923
 BoxCollider:
@@ -6695,6 +6732,7 @@ MonoBehaviour:
   _buyText: {fileID: 535467896}
   _priceText: {fileID: 416219652}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
 --- !u!1 &1756238388
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,6 +7259,7 @@ GameObject:
   - component: {fileID: 1876557489}
   - component: {fileID: 1876557488}
   - component: {fileID: 1876557487}
+  - component: {fileID: 1876557490}
   m_Layer: 5
   m_Name: AddButton
   m_TagString: Untagged
@@ -7332,6 +7371,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876557485}
   m_CullTransparentMesh: 1
+--- !u!114 &1876557490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876557485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c84476a3febb6045ba22f169a823b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _banner: {fileID: 11400000, guid: 6bfb8e7c936463844adc74bc4bc07adb, type: 2}
+  _bannerShower: {fileID: 1730666838}
+  _spawnPosition: {fileID: 108759946}
+  _system: {fileID: 19863498, guid: d59453060233d2f49884f7de0b768335, type: 3}
+  _offsetZ: 2
 --- !u!1001 &1945350871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7435,6 +7491,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 591c7c7adb1283a428a3541aaaf8c2f0, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 1
 --- !u!65 &1948217681
 BoxCollider:
@@ -8025,6 +8082,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 8a743a689821d7e46b12ea80e9675101, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 1
 --- !u!65 &2071683226
 BoxCollider:
@@ -8141,6 +8199,7 @@ MonoBehaviour:
   _banner: {fileID: 11400000, guid: 3171aa84b9c3d01419650b55d6c4f2ff, type: 2}
   _bannerShower: {fileID: 1730666838}
   _buyButton: {fileID: 252173878}
+  _rewardButton: {fileID: 1876557490}
   _isAnvil: 1
 --- !u!65 &2084455156
 BoxCollider:
@@ -10318,7 +10377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d210ad73f082f44b32c9262e6b9db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentMoveSpeed: 2
+  _currentMoveSpeed: 3
   _rotationFactorPerFrame: 5
 --- !u!143 &3547763875127910391
 CharacterController:

@@ -14,6 +14,8 @@ public abstract class UpgradeButton : MonoBehaviour
     public Action LevelIncreased;
     public Action MaxLevelReached;
 
+    public int PublicCurrentLevel => CurrentLevel;
+
     private void Awake()
     {
         Button = GetComponent<Button>();
@@ -27,5 +29,10 @@ public abstract class UpgradeButton : MonoBehaviour
     public int GetCurrentLevel()
     {
         return CurrentLevel;
+    }
+
+    public void IncreaseCurrentLevel()
+    {
+        CurrentLevel++;
     }
 }
