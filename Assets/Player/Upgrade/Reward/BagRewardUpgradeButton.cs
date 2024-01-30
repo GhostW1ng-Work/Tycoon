@@ -8,11 +8,13 @@ public class BagRewardUpgradeButton : RewardUpgradeButton
     private void OnEnable()
     {
         Button.onClick.AddListener(ShowReward);
+        _bag.MaxLevelReached += OnMaxLevelReached;
     }
 
     private void OnDisable()
     {
         Button.onClick.RemoveListener(ShowReward);
+        _bag.MaxLevelReached -= OnMaxLevelReached;
     }
 
     private void ShowReward()
@@ -24,24 +26,11 @@ public class BagRewardUpgradeButton : RewardUpgradeButton
 
     private void OnUpgrade()
     {
-
-        if (_bag.CurrentLevel >= _bag.MaxLevel)
-        {
-            Upgrade.MaxLevelReached?.Invoke();
-            Destroy(Upgrade.gameObject);
-            Destroy(gameObject);
-        }
-        else
-        {
-            Upgrade.IncreaseCurrentLevel();
-            Upgrade.LevelIncreased?.Invoke();
             _bag.IncreaseMaxCapacity();
-            if (_bag.CurrentLevel >= _bag.MaxLevel)
-            {
-                Upgrade.MaxLevelReached?.Invoke();
-                Destroy(Upgrade.gameObject);
-                Destroy(gameObject);
-            }
-        }
+    }
+
+    private void OnMaxLevelReached()
+    {
+        Destroy(gameObject);
     }
 }

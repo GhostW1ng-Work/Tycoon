@@ -604,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 248007260}
-  - component: {fileID: 248007259}
+  - component: {fileID: 248007261}
   m_Layer: 0
   m_Name: BagCapacityTextUpdater
   m_TagString: Untagged
@@ -612,21 +612,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &248007259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248007258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e37d533a411156419101fc5d0553779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelText: {fileID: 1585862887}
-  _priceText: {fileID: 2059262553}
-  _upgradeButton: {fileID: 1759383346}
 --- !u!4 &248007260
 Transform:
   m_ObjectHideFlags: 0
@@ -642,6 +627,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &248007261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248007258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154b3805260248b4ab2c645d4a43a31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelText: {fileID: 1585862887}
+  PriceText: {fileID: 2059262553}
+  UpgradeButton: {fileID: 1759383346}
+  _bag: {fileID: 3547763875127910393}
 --- !u!1 &252173873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wallet: {fileID: 3547763875127910392}
+  UpButton: {fileID: 268234557}
   _prices: 190000003200000064000000c80000009001000020030000
   _mover: {fileID: 3547763875127910388}
 --- !u!1 &352315851
@@ -6142,7 +6144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597037949}
-  - component: {fileID: 1597037948}
+  - component: {fileID: 1597037950}
   m_Layer: 0
   m_Name: MoveSpeedTextUpdater
   m_TagString: Untagged
@@ -6150,21 +6152,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1597037948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597037947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e37d533a411156419101fc5d0553779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelText: {fileID: 1654942476}
-  _priceText: {fileID: 933385773}
-  _upgradeButton: {fileID: 268234557}
 --- !u!4 &1597037949
 Transform:
   m_ObjectHideFlags: 0
@@ -6180,6 +6167,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1597037950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597037947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1c8ad9c2186bd488aaddb2c8866623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelText: {fileID: 1654942476}
+  PriceText: {fileID: 933385773}
+  UpgradeButton: {fileID: 268234557}
+  _mover: {fileID: 3547763875127910388}
 --- !u!1 &1605498525
 GameObject:
   m_ObjectHideFlags: 0
@@ -7529,6 +7532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wallet: {fileID: 3547763875127910392}
+  UpButton: {fileID: 1759383346}
   _prices: 050000000a0000000f00000014000000190000001e000000
   _bag: {fileID: 3547763875127910393}
 --- !u!4 &1792239886 stripped

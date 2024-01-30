@@ -1,38 +1,38 @@
 using UnityEngine;
 using TMPro;
 
-public class UpgradeTextUpdater : MonoBehaviour
+public abstract class UpgradeTextUpdater : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _levelText;
-    [SerializeField] private TMP_Text _priceText;
-    [SerializeField] private UpgradeButton _upgradeButton;
+    private const string MAX_LEVEL_REACHED = "MaxLevelReached";
 
-    private void Start()
+    [SerializeField] protected TMP_Text LevelText;
+    [SerializeField] protected TMP_Text PriceText;
+    [SerializeField] protected UpgradeButton UpgradeButton;
+
+    protected void Start()
     {
-        OnLevelIncreased();
+        if (!PlayerPrefs.HasKey(MAX_LEVEL_REACHED+name))
+        {
+            OnLevelIncreased();
+        }
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
-        _upgradeButton.LevelIncreased += OnLevelIncreased;
-        _upgradeButton.MaxLevelReached += OnMaxLevelReached;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
-        _upgradeButton.LevelIncreased -= OnLevelIncreased;
-        _upgradeButton.MaxLevelReached -= OnMaxLevelReached;
     }
 
-    private void OnLevelIncreased()
+    protected virtual void OnLevelIncreased()
     {
-        _levelText.text = (_upgradeButton.GetCurrentLevel() + 1).ToString();
-        _priceText.text = _upgradeButton.GetPrice(_upgradeButton.GetCurrentLevel()).ToString();
     }
 
-    private void OnMaxLevelReached()
+    protected virtual void OnMaxLevelReached()
     {
-        _levelText.text = "Max Level";
-        _priceText.alpha = 0;
+        LevelText.text = "Max Level";
+        PriceText.alpha = 0;
+        PlayerPrefs.SetInt(MAX_LEVEL_REACHED+name, 1);
     }
 }

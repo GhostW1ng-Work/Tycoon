@@ -1,11 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMover : MonoBehaviour
 {
+    private const string CURRENT_LEVEL_MOVE_SPEED = "CurrentLevelMoveSpeed";
+
     [SerializeField] private float _currentMoveSpeed;
     [SerializeField] private float _rotationFactorPerFrame = 1;
 
@@ -21,6 +21,8 @@ public class PlayerMover : MonoBehaviour
     public int MaxLevel => _maxLevel;
     public float MoveSpeed => _currentMoveSpeed;
     public Action<bool> MovementChanged;
+    public Action LevelIncreased;
+    public Action MaxLevelReached;
 
     private void Awake()
     {
@@ -30,7 +32,22 @@ public class PlayerMover : MonoBehaviour
         _playerInput.CharacterControl.Move.started += OnMovementInput;
         _playerInput.CharacterControl.Move.canceled += OnMovementInput;
         _playerInput.CharacterControl.Move.performed += OnMovementInput;
+
+        if (PlayerPrefs.HasKey(CURRENT_LEVEL_MOVE_SPEED))
+        {
+            _currentLevel = PlayerPrefs.GetInt(CURRENT_LEVEL_MOVE_SPEED);
+            _currentMoveSpeed += _currentLevel;
+            if(_currentLevel >= _maxLevel)
+            {
+                MaxLevelReached?.Invoke();
+            }
+            else
+            {
+                LevelIncreased?.Invoke();
+            }
+        }
     }
+
 
     private void OnEnable()
     {
@@ -78,5 +95,14 @@ public class PlayerMover : MonoBehaviour
     {
         _currentLevel++;
         _currentMoveSpeed++;
+        PlayerPrefs.SetInt(CURRENT_LEVEL_MOVE_SPEED, _currentLevel);
+        if (_currentLevel >= _maxLevel)
+        {
+            MaxLevelReached?.Invoke();
+        }
+        else
+        {
+            LevelIncreased?.Invoke();
+        }
     }
 }

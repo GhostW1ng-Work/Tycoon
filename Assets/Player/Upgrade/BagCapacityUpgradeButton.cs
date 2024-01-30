@@ -7,33 +7,25 @@ public class BagCapacityUpgradeButton : UpgradeButton
     private void OnEnable()
     {
         Button.onClick.AddListener(OnUpgrade);
+        _bag.MaxLevelReached += OnMaxLevelReached;
     }
 
     private void OnDisable()
     {
         Button.onClick.RemoveListener(OnUpgrade);
+        _bag.MaxLevelReached -= OnMaxLevelReached;
     }
 
     private void OnUpgrade()
     {
-        if(_bag.CurrentLevel >= _bag.MaxLevel)
+        if (Wallet.TrySpendMoney(GetPrice(_bag.CurrentLevel - 1)))
         {
-            MaxLevelReached?.Invoke();
-            Destroy(gameObject);
+            _bag.IncreaseMaxCapacity();
         }
-        else
-        {
-            if(Wallet.TrySpendMoney(GetPrice(_bag.CurrentLevel - 1)))
-            {
-                CurrentLevel++;
-                LevelIncreased?.Invoke();
-                _bag.IncreaseMaxCapacity();
-                if (_bag.CurrentLevel >= _bag.MaxLevel)
-                {
-                    MaxLevelReached?.Invoke();
-                    Destroy(gameObject);
-                }
-            }
-        }
+    }
+
+    private void OnMaxLevelReached()
+    {
+        Destroy(gameObject);
     }
 }

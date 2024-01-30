@@ -8,11 +8,13 @@ public class MoveSpeedRewardUpgrade : RewardUpgradeButton
     private void OnEnable()
     {
         Button.onClick.AddListener(ShowReward);
+        _mover.MaxLevelReached += OnMaxLevelReached;
     }
 
     private void OnDisable()
     {
         Button.onClick.RemoveListener(ShowReward);
+        _mover.MaxLevelReached -= OnMaxLevelReached;
     }
 
     private void ShowReward()
@@ -24,23 +26,11 @@ public class MoveSpeedRewardUpgrade : RewardUpgradeButton
 
     private void OnUpgrade()
     {
-        if (_mover.CurrentLevel >= _mover.MaxLevel)
-        {
-            Upgrade.MaxLevelReached?.Invoke();
-            Destroy(Upgrade.gameObject);
-            Destroy(gameObject);
-        }
-        else
-        {
-            Upgrade.IncreaseCurrentLevel();
-            Upgrade.LevelIncreased?.Invoke();
-            _mover.IncreaseMoveSpeed();
-            if (_mover.CurrentLevel >= _mover.MaxLevel)
-            {
-                Upgrade.MaxLevelReached?.Invoke();
-                Destroy(Upgrade.gameObject);
-                Destroy(gameObject);
-            }
-        }
+        _mover.IncreaseMoveSpeed();
+    }
+
+    private void OnMaxLevelReached()
+    {
+        Destroy(gameObject);
     }
 }

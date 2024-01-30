@@ -1,9 +1,12 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections.Generic;
+using System;
 
 public class PlayerBag : MonoBehaviour
 {
+    private const string CURRENT_LEVEL_CAPACITY = "CurrentLevelCapacity";
+
     [SerializeField] private Transform _bagTransform;
     [SerializeField] private int _maxCapacity;
 
@@ -14,6 +17,27 @@ public class PlayerBag : MonoBehaviour
 
     public int CurrentLevel => _currentLevel;
     public int MaxLevel => _maxLevel;
+
+    public Action LevelIncreased;
+    public Action MaxLevelReached;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey(CURRENT_LEVEL_CAPACITY))
+        {
+            _currentLevel = PlayerPrefs.GetInt(CURRENT_LEVEL_CAPACITY);
+            _maxCapacity += _currentLevel;
+            if(_currentLevel >= _maxLevel)
+            {
+                MaxLevelReached?.Invoke();
+            }
+            else
+            {
+                LevelIncreased?.Invoke();
+            }
+
+        }
+    }
 
     private void Start()
     {
@@ -65,5 +89,14 @@ public class PlayerBag : MonoBehaviour
     {
         _currentLevel++;
         _maxCapacity++;
+        PlayerPrefs.SetInt(CURRENT_LEVEL_CAPACITY, _currentLevel);
+        if(_currentLevel >= _maxLevel)
+        {
+            MaxLevelReached?.Invoke();
+        }
+        else
+        {
+            LevelIncreased?.Invoke();
+        }
     }
 }

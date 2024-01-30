@@ -7,33 +7,25 @@ public class MaxSpeedUpgrader : UpgradeButton
     private void OnEnable()
     {
         Button.onClick.AddListener(OnUpgrade);
+        _mover.MaxLevelReached += OnMaxLevelReached;
     }
 
     private void OnDisable()
     {
         Button.onClick.RemoveListener(OnUpgrade);
+        _mover.MaxLevelReached -= OnMaxLevelReached;
     }
 
     private void OnUpgrade()
     {
-        if (_mover.CurrentLevel >= _mover.MaxLevel)
+        if (Wallet.TrySpendMoney(GetPrice(_mover.CurrentLevel - 1)))
         {
-            MaxLevelReached?.Invoke();
-            Destroy(gameObject);
+            _mover.IncreaseMoveSpeed();
         }
-        else
-        {
-            if (Wallet.TrySpendMoney(GetPrice(_mover.CurrentLevel - 1)))
-            {
-                CurrentLevel++;
-                LevelIncreased?.Invoke();
-                _mover.IncreaseMoveSpeed();
-                if (_mover.CurrentLevel >= _mover.MaxLevel)
-                {
-                    MaxLevelReached?.Invoke();
-                    Destroy(gameObject);
-                }
-            }
-        }
+    }
+
+    private void OnMaxLevelReached()
+    {
+        Destroy(gameObject);
     }
 }
