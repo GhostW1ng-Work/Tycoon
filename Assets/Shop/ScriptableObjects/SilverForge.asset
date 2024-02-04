@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
   m_Name: SilverForge
   m_EditorClassIdentifier: 
-  _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
+  _buyTextEn: Buy a silver smelter?
+  _buyTextRu: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
     \u0441\u0435\u0440\u0435\u0431\u0440\u0430?"
+  _buyTextTr: "G\xFCm\xFC\u015F izabe tesisi mi sat\u0131n al\u0131yorsunuz?"
   _price: 2500
   _buildTemplate: {fileID: 551084663759481979, guid: efe63f3410fcaf94d820e9817a86f212, type: 3}

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
   m_Name: CopperForge
   m_EditorClassIdentifier: 
-  _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
+  _buyTextEn: Buy a copper smelter?
+  _buyTextRu: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
     \u043C\u0435\u0434\u0438?"
+  _buyTextTr: "Bak\u0131r izabe tesisi mi sat\u0131n al\u0131yorsunuz?"
   _price: 10
   _buildTemplate: {fileID: 5183740335043943402, guid: 6ea08243948f3ec44b0014e93a56d1fb, type: 3}

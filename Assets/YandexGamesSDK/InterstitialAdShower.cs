@@ -8,14 +8,27 @@ public class InterstitialAdShower : MonoBehaviour
     [SerializeField] private float _maxAdTime;
 
     private float _currentAdTime = 0;
+
     private IEnumerator Start()
     {
         _currentAdTime = Random.Range(_minAdTime, _maxAdTime);
-#if !UNITY_WEBGL || UNITY_EDITOR
+#if !UNITY_EDITOR && UNITY_WEBGL
+        yield return YandexGamesSdk.Initialize();
+        switch (YandexGamesSdk.Environment.i18n.lang)
+        {
+            case "ru":
+                Lean.Localization.LeanLocalization.SetCurrentLanguageAll("Russian");
+                break;
+            case "en":
+                Lean.Localization.LeanLocalization.SetCurrentLanguageAll("English");
+                break;
+            case "tr":
+                Lean.Localization.LeanLocalization.SetCurrentLanguageAll("Turkish");
+                break;
+        }
+#else
         yield break;
 #endif
-        // Always wait for it if invoking something immediately in the first scene.
-        yield return YandexGamesSdk.Initialize();
     }
 
     private void Update()

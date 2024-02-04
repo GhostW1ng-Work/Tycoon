@@ -22,11 +22,11 @@ public class RewardBuyButton : MonoBehaviour
 
     private IEnumerator Start()
     {
-#if !UNITY_WEBGL || UNITY_EDITOR
+#if !UNITY_EDITOR && UNITY_WEBGL
+        yield return YandexGamesSdk.Initialize();
+#else
         yield break;
 #endif
-        // Always wait for it if invoking something immediately in the first scene.
-        yield return YandexGamesSdk.Initialize();
     }
 
     private void OnEnable()

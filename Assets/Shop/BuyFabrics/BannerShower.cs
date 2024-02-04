@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using Agava.YandexGames;
+using System.Collections;
 
 public class BannerShower : MonoBehaviour
 {
@@ -8,6 +10,15 @@ public class BannerShower : MonoBehaviour
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private BuyButton _buyButton;
     [SerializeField] private RewardBuyButton _rewardButton;
+
+    private IEnumerator Start()
+    {
+#if !UNITY_EDITOR && UNITY_WEBGL
+        yield return YandexGamesSdk.Initialize();
+#else
+        yield break;
+#endif
+    }
 
     private void OnEnable()
     {
@@ -42,8 +53,25 @@ public class BannerShower : MonoBehaviour
 
     public void SetBanner(Banner banner)
     {
-        _buyText.text = banner.BuyText;
-        _priceText.text = $"{banner.Price} монеток";
+        switch (YandexGamesSdk.Environment.i18n.lang)
+        {
+            case "en":
+                _buyText.text = banner.BuyTextEn;
+                _priceText.text = $"{banner.Price} coins";
+                break;
+            case "ru":
+                _buyText.text = banner.BuyTextRu;
+                _priceText.text = $"{banner.Price} монеток";
+                break;
+            case "tr":
+                _buyText.text = banner.BuyTextTr;
+                _priceText.text = $"{banner.Price} coins";
+                break;
+            default:
+                _buyText.text = banner.BuyTextEn;
+                _priceText.text = $"{banner.Price} coins";
+                break;
+        }
         _buyButton.SetPrice(banner.Price);
         _buyButton.SetBanner(banner);
     }

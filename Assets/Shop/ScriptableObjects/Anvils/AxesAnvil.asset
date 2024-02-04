@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
   m_Name: AxesAnvil
   m_EditorClassIdentifier: 
-  _buyText: "\u041D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044F \u0442\u043E\u043F\u043E\u0440\u043E\u0432"
+  _buyTextEn: Buy an axe anvil?
+  _buyTextRu: "\u041A\u0443\u043F\u0438\u0442\u044C \u043A\u0443\u0437\u043D\u0438\u0446\u0443
+    \u0442\u043E\u043F\u043E\u0440\u043E\u0432?"
+  _buyTextTr: "Balta \xF6rs\xFC m\xFC al\u0131yorsunuz?"
   _price: 5
   _buildTemplate: {fileID: 3934096075595287648, guid: bb3977c4007e3984e8f9fe6205d3f5f5, type: 3}

@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using Agava.YandexGames;
 
 public class BuyTrigger : MonoBehaviour
 {
@@ -16,8 +18,9 @@ public class BuyTrigger : MonoBehaviour
 
     public static Action TriggerEntered;
 
-    private void Start()
+    private IEnumerator Start()
     {
+#if !UNITY_EDITOR && UNITY_WEBGL
         if (PlayerPrefs.HasKey(IS_BUYED+name))
         {
             _isBuyed = PlayerPrefs.GetInt(IS_BUYED+name);
@@ -26,6 +29,18 @@ public class BuyTrigger : MonoBehaviour
                 Build();
             }
         }
+        yield return YandexGamesSdk.Initialize();
+#else
+        if (PlayerPrefs.HasKey(IS_BUYED + name))
+        {
+            _isBuyed = PlayerPrefs.GetInt(IS_BUYED + name);
+            if (_isBuyed == 1)
+            {
+                Build();
+            }
+        }
+        yield break;
+#endif
     }
 
     public void SubcribeToOnBuildingBuyed()

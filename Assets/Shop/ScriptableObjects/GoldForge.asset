@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0263b7298b3bd3f45994571201164552, type: 3}
   m_Name: GoldForge
   m_EditorClassIdentifier: 
-  _buyText: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
+  _buyTextEn: Buy a gold smelter?
+  _buyTextRu: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0430\u0432\u0438\u043B\u044C\u043D\u044E
     \u0437\u043E\u043B\u043E\u0442\u0430?"
+  _buyTextTr: "Alt\u0131n izabe tesisi mi sat\u0131n al\u0131yorsunuz?"
   _price: 5000
   _buildTemplate: {fileID: 195126075135880630, guid: 64beba68c82674e45822f0aa65ec1558, type: 3}
