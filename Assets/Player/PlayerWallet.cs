@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerWallet : MonoBehaviour
 {
     private const string COINS_COUNT = "CoinsCount";
-    private int _coinsCount = 15000;
+    private int _coinsCount = 15;
 
     public int CoinsCount => _coinsCount;
 
